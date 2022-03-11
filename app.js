@@ -15,6 +15,7 @@ app.use((req,res,next)=>{
 app.use('/movies',moviesRouter);
 //Otros direccionaminetos ...
 
+app.use('/users', usersRouter);
 
 app.use('*',errorRouter);
 app.use(clientErrorHandler);
