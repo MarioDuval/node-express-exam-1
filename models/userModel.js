@@ -1,12 +1,14 @@
 import users from '../data/user.js'
 
 class userModel {
-    getUser() {
-        return users;
+    
+    registerUser(user){
+        users.push(user);
+        return users.find(element => element.username == user.username);
     }
 
-    registerUser(user){
-        return users.push(user);
+    loginUser(user) {
+        return users.find(element => (element.username == user.username));
     }
     
 }
